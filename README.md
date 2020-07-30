@@ -6,5 +6,5 @@ In order to calculate the probabilities, I wrote an OOP Python script that gener
 After the simulation was complete, I created a visualization on R:
 
 <p align="center">
-  <img src="monopoly_probabilities.png" />
+  <img src="monopoly_probs.png" />
 </p>
