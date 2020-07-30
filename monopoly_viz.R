@@ -50,8 +50,8 @@ a<-ggplot()+
   scale_fill_identity()+
   geom_text(data=tiles,aes(x=x_lab,y=y_lab,label=perc_label,color=ifelse(id%in%c(0,10.5),"white","black")),size=4,fontface="bold")+
   scale_color_manual(values=c("black","white"),guide=FALSE)+
-  geom_label(aes(x=6.5/2-0.4,y=(6.5/2)+1.3,label="THE PROBABILITIES OF"),size=5,color="white",fill="gray60",family="Kabel-Heavy",label.padding = unit(0.4,"lines"))+
-  geom_label(aes(x=6.5/2,y=(6.5/2)+0.8,label="MONOPOLY"),size=12,color="white",fill="#ee1b24",family="Kabel-Heavy",label.padding = unit(0.5,"lines"))+
+  geom_label(aes(x=6.5/2-0.35,y=(6.5/2)+1.3,label="THE PROBABILITIES OF"),size=5,color="white",fill="gray60",family="Kabel-Heavy",label.padding = unit(0.4,"lines"))+
+  geom_label(aes(x=6.5/2,y=(6.5/2)+0.9,label="MONOPOLY"),size=12,color="white",fill="#ee1b24",family="Kabel-Heavy",label.padding = unit(0.5,"lines"))+
   geom_text(aes(x=6.5/2,y=2.4,label="SPACE COLOR INDICATES THE RELATIVE \n PROBABILITY OF LANDING OVER 500,000\n SIMULATIONS OF THE GAME\n\nConsiders dice rolls, 'the three-doubles rule',\nCommunity Chest and Chance Cards, and \nlanding on the 'Go To Jail' Tile"),fontface="bold",color="gray50")+
   geom_text(aes(x=6,y=0.6,label="GO"),color="white",family="Kabel-Heavy",size=5)+
   geom_text(aes(x=0.7,y=0.62,label="JAIL"),color="white",family="Kabel-Heavy",size=3)+
