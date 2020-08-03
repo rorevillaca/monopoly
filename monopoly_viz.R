@@ -10,6 +10,7 @@ library(cowplot)
 
 font_import(paths = c("C:/Users/rodrigo.revilla/AppData/Local/Microsoft/Windows/Fonts", prompt = F))
 install.packages("extrafontdb")
+library(extrafont)
 loadfonts()
 
 #Data wrangling
@@ -68,7 +69,3 @@ additional_elements <- ggdraw()
 additional_elements <- additional_elements + draw_label("github.com/Rorevilla", x = 0.89, y = 0.04,colour = "gray50",fontface="bold",size=8.5)
 
 final_plot<-additional_elements+draw_plot(a+ theme(plot.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "in")))
-
-new_scale <- function(new_aes) {
-  structure(ggplot2::standardise_aes_names(new_aes), class = "new_aes")
-}
