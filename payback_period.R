@@ -72,5 +72,37 @@ additional_elements <- additional_elements + draw_label("MEDITERRANEAN AVE.",y=0
 additional_elements
 
 
+#PAYBACK PERIOD ADJUSTED FOR LANDING PROBABILITY - GROUPS, 1 HOTEL
 
+
+a<-payback_period_streets %>% group_by(group_color,color_code) %>% 
+  summarise(rent_with_hotel=sum(rent_with_hotel),building_costs=sum(building_costs),landing_probability=mean(landing_probability),printed_price=sum(printed_price)) %>%
+  ungroup() %>% mutate(value_at_100=((100*rent_with_hotel)/(1/landing_probability))-printed_price-5*building_costs) %>% 
+  ggplot() +
+  geom_hline(aes(yintercept=0),size=1,color="gray70")+
+  geom_segment(aes(x=0,y=-printed_price-5*building_costs,xend=100,yend=value_at_100,color=color_code),size=1.2)+
+  scale_color_identity()+
+  scale_y_continuous(labels=scales::comma)+
+  scale_x_continuous(breaks=seq(0,140,10),expand=expansion(mult=c(0,0),add=c(1,0)))+
+  labs(y="Earnings ($)",x="Number of turns",title="Earnings vs. number of dice rolls per color group - 1 hotel")+
+  theme_minimal()+
+  theme(axis.title.x = element_text(hjust = 0, vjust=0, colour="darkgrey",size=12,face="bold"))+
+  theme(axis.title.y = element_text(hjust = 0, vjust=3, colour="darkgrey",size=12,face="bold"))+
+  theme(plot.margin = margin(t = .1, r = 1, b = 0.1, l = 0.1, unit = "in"))
+
+
+payback_period_streets %>% group_by(group_color,color_code) %>% 
+  summarise(rent_with_hotel=sum(rent_with_hotel),building_costs=sum(building_costs),landing_probability=mean(landing_probability),printed_price=sum(printed_price)) %>%
+  ungroup() %>% mutate(slope=rent_with_hotel/(1/landing_probability)) %>% select(group_color,color_code,slope) %>% arrange(desc(slope))
+
+additional_elements <- ggdraw(a)
+additional_elements <- additional_elements + draw_label("$78.8",y=0.93,x=0.91,color="#f0932d",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("$85.8",y=0.91,x=0.91,color="#ed1b24",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("$85.7",y=0.89,x=0.91,color="#fef200",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("$93.8",y=0.87,x=0.91,color="#22af5b",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("$77.1",y=0.84,x=0.91,color="#0072ba",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("$56.2",y=0.74,x=0.91,color="#d93a96",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("$36.7",y=0.65,x=0.91,color="#aadff9",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("$13.9",y=0.50,x=0.91,color="#955437",size=11,fontfamily="Kabel-Heavy",hjust = 0)
+additional_elements <- additional_elements + draw_label("Average revenue per turn",y=0.94,x=0.985,color="gray60",size=11,fontfamily="Roboto Condensed",fontface = "bold",hjust = 0,angle=-90)
 

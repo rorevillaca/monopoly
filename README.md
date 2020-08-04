@@ -26,3 +26,9 @@ After the simulation was complete, I created a visualization on R:
 <p align="center">
   <img src="payback_w_prob_1_hotel.png" />
 </p>
+
+---
+
+<p align="center">
+  <img src="rolls_color_group_1_hotel.png" />
+</p>
