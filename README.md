@@ -2,7 +2,7 @@
 
 I recently played Monopoly with my friends. I had not played in a very long time and ended up devising a strategy on the go, which lead me to loose after three pretty frustrating hours. I decided to make an analysis in order to deterime what properties provide their owner the best revenue.
 
-## Landing Probabilities
+#### Landing Probabilities
 
 The first step in my approach was to determine the landing probabilities for each tile in the game. For this, I took into consideration several factors: 
 * Landing on spaces as a product of dice rolls
@@ -22,7 +22,7 @@ Well, yes and no. As a rough first answer, they are a good investment. Having th
 
 ---
 
-## Property Payback
+#### Property Payback
 
 <p align="center">
   <img src="payback_no_buidlings.png" />
