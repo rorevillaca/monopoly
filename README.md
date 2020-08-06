@@ -45,7 +45,7 @@ The previous plot is not so useful, because it assumes that are properties are l
 
 Note that with no buildings, the payback of the properties takes a large number of turns. This reflects the low rent associated to empty properties and means that the game would never end if no houses were built. 
 
----
+Adding hotels to the analysis results in some interesting insights. In a period between 23 and 45 turns all investments pay off except for the Mediterranean Avenue, which takes 20 additional dice rolls. The differences between properties are quite clear, and the ones belonging to the red, orange, green and blue groups present clear advantages over the rest of the colors. It is once again important to note that blue and green ones are pricier, requiring a bigger initial investment to obtain the calculated earnings. 
 
 <p align="center">
   <img src="payback_w_prob_1_hotel.png" />
