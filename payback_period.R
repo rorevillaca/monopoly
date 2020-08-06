@@ -90,7 +90,6 @@ a<-payback_period_streets %>% group_by(group_color,color_code) %>%
   theme(axis.title.y = element_text(hjust = 0, vjust=3, colour="darkgrey",size=12,face="bold"))+
   theme(plot.margin = margin(t = .1, r = 1, b = 0.1, l = 0.1, unit = "in"))
 
-
 payback_period_streets %>% group_by(group_color,color_code) %>% 
   summarise(rent_with_hotel=sum(rent_with_hotel),building_costs=sum(building_costs),landing_probability=mean(landing_probability),printed_price=sum(printed_price)) %>%
   ungroup() %>% mutate(slope=rent_with_hotel/(1/landing_probability)) %>% select(group_color,color_code,slope) %>% arrange(desc(slope))
