@@ -53,6 +53,12 @@ Adding hotels to the analysis results in some interesting insights. In a period 
 
 ---
 
+## Considering groups
+
+There is one final consideration for the analysis. Properties in Monopoly cannot be bought independently; in order to have a building on a group, all the properties on its color group must belong to a player. Additionally, in order to build a hotel, all the properties in a group must have either 4 houses or a hotel. This last plot considers this and shows the payback per group, depending on the amount of dice rolls in the game.
+
 <p align="center">
   <img src="rolls_color_group_1_hotel.png" />
 </p>
+
+This plot answers the initial question. The best properties to buy on Monopoly are those on the orange group, followed by the red and yellow ones. The total red group price is just over $2,000 (including property and building costs), which is considerably less than the yellow, blue, green and red groups, and the payback is greater than all other groups for the first 100 turns. On average, having hotels on its three properties provides the owner with $78.8 per turn. This conclusion considers games with up to 100 turns, which should be useful in most cases.  
