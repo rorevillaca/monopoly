@@ -35,9 +35,15 @@ Let´s now dive into the world of finance. I obtained the costs and rents associ
 
 ---
 
+#### Property Payback - adjusted for landing probability
+
+The previous plot is not so useful, because it assumes that are properties are landed on equally. If we take into consideration the landing probability for each space, a better approximation is obtained. The adjusted plot is presented below. 
+
 <p align="center">
   <img src="payback_w_prob_no_b.png" />
 </p>
+
+Note that with no buildings, the payback of the properties takes a large number of turns. This reflects the low rent associated to empty properties and means that the game would never end if no houses were built. 
 
 ---
 
