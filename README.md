@@ -18,7 +18,7 @@ I integrated the board, dice and special rules in an OOP Python script that gene
 
 The results are pretty interesting. The two most landed spaces on the board are "Go" and "Jail". This makes sense, as there are several events that lead to being redirected to these spaces. If landing on the "Jail" space is so common, it is logical that the following spaces are also visited a lot. In particular, Illinois Avenue is the most visited property on the board, followed by New York Avenue, Tennessee Avenue and the B. & O. Railroad. Great! The high probability associated with the Orange and Red groups make them the best investment in the game, right?
 
-Well, yes and no. As a rough first answer, they are a good investment. Having these properties means that players getting out of jail will very likely fall on these spaces. However, adding other variables to the analysis will provide a more accurate answer...
+Well, yes and no. As a rough first answer, they are a good investment. Having these properties means that players getting out of jail will very likely fall on them. However, adding other variables to the analysis will provide a more accurate answer...
 
 ---
 
