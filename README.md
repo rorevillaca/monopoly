@@ -24,6 +24,11 @@ Well, yes and no. As a rough first answer, they are a good investment. Having th
 
 #### Property Payback
 
+Let´s now dive into the world of finance. I obtained the costs and rents associated to each one of the properties on board from [this](https://monopoly.fandom.com/wiki/Property)  Wiki. In the following plot, I present the net amount of money produced by each property when someone lands on it, without buildings. This provides us with a general grasp of the properties and their groups:
+* The brown group has the cheapest properties, but with the lowest long-term payback.
+* The blue group has the most expensive properties, and the highest payback. Note that this properties are also the ones that most rapidly pay themselves back.
+* The rest of the colors (green, yellow, red, orange, pink and blue) fall in between, in that particular order.
+
 <p align="center">
   <img src="payback_no_buidlings.png" />
 </p>
